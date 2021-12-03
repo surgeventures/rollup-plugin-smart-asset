@@ -125,7 +125,7 @@ export default (initialOptions = {}) => {
     keepName: false,          // alias for nameFormat: [name]~[hash][ext] (requires useHash)
     nameFormat: null,         // valid patterns: [name] | [ext] | [hash]
     hashOptions: {            // hash options:
-      hash: "sha1",           // "sha1", "md5", "metrohash128", "xxhash64" etc or Hash-like class
+      hash: "sha1",           // "sha1", "md5", etc or Hash-like class
       encoding: "base52",     // "hex", "base64", "base62", "base58", "base52" etc
       maxLength: 8            // truncate final digest to specific length
     },

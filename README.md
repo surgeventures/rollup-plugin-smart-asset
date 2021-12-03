@@ -128,8 +128,6 @@ Options:
 - `hashOptions`: Hash options.
   - `hash`: Any valid Node's crypto hashing algorithm e.g. `sha1`, `md5` etc,
     Hash-like class (see: https://nodejs.org/api/crypto.html#crypto_class_hash),
-    `metrohash64` or `metrohash128` if `metrohash` is installed,
-    `xxhash32` or `xxhash64` if `xxhash` is installed.
     Default is `sha1`.
   - `encoding`: Hash encoding `hex`, `base64` `base62`, `base58`, `base52`,
     `base49`, `base36`, `base32`, `base26`. Default is `base52`.
@@ -166,14 +164,6 @@ Changes:
 The default configuration is changed in favor of default hash functions
 that are available in NodeJS without requirement to build any native
 extensions during `npm install`.
-
-If you would like to use ultra fast `metrohash64` or `metrohash128` hashes
-then do `npm install metrohash` and set `hashOptions.hash` to `metrohash64`
-or `metrohash128`.
-
-If you would like to use ultra fast `xxhash32` or `xxhash64` hashes
-then do `npm install xxhash` and set `hashOptions.hash` to `xxhash32`
-or `xxhash64`.
 
 ## Alternatives
 
