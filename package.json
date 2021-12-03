@@ -26,7 +26,8 @@
     "test": "npm run eslint && npm run jest",
     "build": "npm run rollup",
     "build-examples": "find examples -name rollup.config.js -exec echo - Building example: {} \\; -execdir rollup -c \\;",
-    "prepublishOnly": "npm run clean && npm run build"
+    "prepublishOnly": "npm run clean && npm run build",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
