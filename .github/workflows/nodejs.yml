@@ -12,6 +12,12 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
+    - name: Harden the runner
+      uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2
+      with:
+        use-policy-store: true
+        api-key: ${{ secrets.GH_FRESHAENGINEERING_STEP_SECURITY_API_KEY }}
+
     - uses: actions/checkout@50fbc622fc4ef5163becd7fab6573eac35f8462e # v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@f1f314fca9dfce2769ece7d933488f076716723e # v1
